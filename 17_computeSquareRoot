@@ -1,0 +1,21 @@
+function computeSquareRoot(num) {
+  let multiple=1;
+  while(true){
+    if(multiple ** 2 === num) return multiple
+    else if (multiple ** 2 > num) {
+      multiple -= 1
+      break
+    }
+    multiple ++;
+  }
+  let count=0;
+  let guess=multiple;
+  while(true){
+    count++
+    if(count === 1000){
+      return parseFloat(guess.toFixed(2));
+    }
+    guess=(guess+(num/guess))/2
+  }
+  return guess
+}
