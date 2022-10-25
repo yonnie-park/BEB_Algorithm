@@ -1,0 +1,10 @@
+function computeWhenDouble(interestRate) {
+  let year=0
+  interestRate = interestRate/100+1
+  let principal = 1;
+  while (principal < 2) {
+    principal = principal * interestRate;
+    year++;
+  }
+  return year
+}
