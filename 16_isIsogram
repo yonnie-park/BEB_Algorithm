@@ -1,0 +1,7 @@
+function isIsogram(str) {
+  if(str.length===0) return true
+  str=str.toLowerCase().split('')
+  let newset = new Set(str)
+  if(newset.size != str.length) return false
+  else return true
+}
