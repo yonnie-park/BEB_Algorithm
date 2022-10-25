@@ -1,0 +1,11 @@
+function insertDash(str) {
+  let output=''
+  str=str.split('')
+  for(let i=0; i<str.length; i++){
+    output+=str[i]
+    if (Number(str[i])%2==1 && Number(str[i+1])%2==1){
+      output+='-'
+    }
+  }
+  return output
+}
